@@ -2,24 +2,23 @@ package entities;
 
 public class ImportedProduct extends Product {
 
-	private double customFee;
+	private Double customFee;
 
-	public ImportedProduct(String name, double price, double customFee) {
+	public ImportedProduct(String name, Double price, Double customFee) {
 		super(name, price);
 		this.customFee = customFee;
 	}
 
-	public double getCustomFee() {
+	public Double getCustomFee() {
 		return customFee;
 	}
 
-	public void setCustomFee(double customFee) {
+	public void setCustomFee(Double customFee) {
 		this.customFee = customFee;
 	}
 
 	public Double totalPrice() {
 		return customFee + getPrice();
-
 	}
 
 	@Override
