@@ -31,7 +31,7 @@ public class ImportedProduct extends Product {
 		sb.append(String.format("%.2f", getPrice()));
 		sb.append(" (Customs fee: $ ");
 		sb.append(String.format("%.2f", customFee));
-		sb.append(") %n");
+		sb.append(") ");
 
 		return sb.toString();
 

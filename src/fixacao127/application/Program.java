@@ -20,28 +20,26 @@ public class Program {
 
 		System.out.print("Enter the number of products: ");
 		int quantity = sc.nextInt();
-
+		System.out.print("\n");
+		
 		List<Product> products = new ArrayList<Product>();
 
 		for (int i = 0; i < quantity; i++) {
 
-			System.out.printf("Product #%d data: /n", i+1);
+			System.out.printf("Product #%d data: \n", i+1);
 
 			System.out.print("Common, used or imported (c/u/i)? ");
 			char productType = sc.next().charAt(0);
 			sc.nextLine();
-			System.out.print("\n");
 
 			if (productType == 'c' || productType == 'u' || productType == 'i') {
 
 				System.out.print("Name: ");
 				String name = sc.next();
 				sc.nextLine();
-				System.out.print("\n");
 
-				System.out.print("Price: $");
+				System.out.print("Price: $ ");
 				Double price = sc.nextDouble();
-				System.out.print("\n");
 
 				switch (productType) {
 
@@ -56,7 +54,6 @@ public class Program {
 					System.out.print("Manufacture date (DD/MM/YYYY): ");
 					String manufactureDate = sc.next();
 					sc.nextLine();
-					System.out.print("\n");
 					
 					products.add(new UsedProduct(name, price, manufactureDate));
 					
@@ -64,7 +61,7 @@ public class Program {
 
 				case 'i':
 
-					System.out.print("Customs fee: $");
+					System.out.print("Customs fee: $ ");
 					Double customFee = sc.nextDouble();
 					
 					products.add(new ImportedProduct(name, price, customFee));
@@ -79,6 +76,8 @@ public class Program {
 			} else {
 				System.out.println("Wrong type entered!");
 			}
+			
+			System.out.print("\n");
 
 		}
 

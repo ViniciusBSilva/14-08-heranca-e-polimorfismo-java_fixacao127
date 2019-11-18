@@ -33,7 +33,6 @@ public class Product {
 		sb.append(name);
 		sb.append(" $ ");
 		sb.append(String.format("%.2f", price));
-		sb.append("%n");
 
 		return sb.toString();
 

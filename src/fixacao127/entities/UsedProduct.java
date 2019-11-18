@@ -46,7 +46,7 @@ public class UsedProduct extends Product {
 		sb.append(String.format("%.2f", getPrice()));
 		sb.append(" (Manufacture date: ");
 		sb.append(sdf.format(manufactureDate));
-		sb.append(") %n");
+		sb.append(") ");
 
 		return sb.toString();
 
