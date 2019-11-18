@@ -22,11 +22,19 @@ public class ImportedProduct extends Product {
 	}
 
 	@Override
-	public String priceTag() {			//TODO code
-		// TODO Auto-generated method stub
-		return "ImportedProduct [customFee=" + customFee + ", getCustomFee()=" + getCustomFee() + ", totalPrice()="
-				+ totalPrice() + ", priceTag()=" + priceTag() + ", getName()=" + getName() + ", getPrice()="
-				+ getPrice() + "]";
+	public String priceTag() {
+
+		StringBuilder sb = new StringBuilder();
+
+		sb.append(getName());
+		sb.append(" $ ");
+		sb.append(String.format("%.2f", getPrice()));
+		sb.append(" (Customs fee: $ ");
+		sb.append(String.format("%.2f", customFee));
+		sb.append(") %n");
+
+		return sb.toString();
+
 	}
 
 }

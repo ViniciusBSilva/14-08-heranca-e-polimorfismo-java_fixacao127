@@ -27,14 +27,14 @@ public class Product {
 	}
 
 	public String priceTag() {
-		
+
 		StringBuilder sb = new StringBuilder();
-		
+
 		sb.append(name);
 		sb.append(" $ ");
 		sb.append(String.format("%.2f", price));
 		sb.append("%n");
-		
+
 		return sb.toString();
 
 	}
