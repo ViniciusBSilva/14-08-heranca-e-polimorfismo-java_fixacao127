@@ -1,5 +1,6 @@
 package fixacao127.entities;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,6 +21,13 @@ public class UsedProduct extends Product {
 		this.manufactureDate = manufactureDate;
 	}
 
+	public void setManufactureDate(String manufactureDate) throws ParseException {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");	
+		
+		this.manufactureDate = sdf.parse(manufactureDate);
+	}
+	
 	@Override
 	public String priceTag() {
 
