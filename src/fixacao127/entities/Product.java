@@ -1,4 +1,4 @@
-package entities;
+package fixacao127.entities;
 
 public class Product {
 

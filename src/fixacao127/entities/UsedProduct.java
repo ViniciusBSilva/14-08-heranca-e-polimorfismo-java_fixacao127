@@ -1,5 +1,6 @@
-package entities;
+package fixacao127.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class UsedProduct extends Product {
@@ -20,10 +21,21 @@ public class UsedProduct extends Product {
 	}
 
 	@Override
-	public String priceTag() {		//TODO code
-		return "UsedProduct [manufactureDate=" + manufactureDate + ", getManufactureDate()=" + getManufactureDate()
-		+ ", priceTag()=" + priceTag() + ", getName()=" + getName() + ", getPrice()=" + getPrice()
-		+ ", toString()=" + super.toString() + "]";
+	public String priceTag() {
+
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+		StringBuilder sb = new StringBuilder();
+
+		sb.append(getName());
+		sb.append(" (used) $ ");
+		sb.append(String.format("%.2f", getPrice()));
+		sb.append(" (Manufacture date: ");
+		sb.append(sdf.format(manufactureDate));
+		sb.append(") %n");
+
+		return sb.toString();
+
 	}
 
 }
