@@ -21,6 +21,9 @@ public class UsedProduct extends Product {
 
 	@Override
 	public String priceTag() {		//TODO code
+		
+		
+		
 		return "UsedProduct [manufactureDate=" + manufactureDate + ", getManufactureDate()=" + getManufactureDate()
 		+ ", priceTag()=" + priceTag() + ", getName()=" + getName() + ", getPrice()=" + getPrice()
 		+ ", toString()=" + super.toString() + "]";

@@ -27,7 +27,15 @@ public class Product {
 	}
 
 	public String priceTag() {
-		return "Product [name=" + name + ", price=" + price + "]"; // TODO code
+		
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(name);
+		sb.append(" $ ");
+		sb.append(String.format("%.2f", price));
+		sb.append("%n");
+		
+		return sb.toString();
 
 	}
 
