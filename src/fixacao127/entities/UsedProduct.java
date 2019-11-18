@@ -13,6 +13,12 @@ public class UsedProduct extends Product {
 		this.manufactureDate = manufactureDate;
 	}
 
+	public UsedProduct(String name, double price, String manufactureDate) throws ParseException {
+		super(name, price);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		this.manufactureDate = sdf.parse(manufactureDate);
+	}
+
 	public Date getManufactureDate() {
 		return manufactureDate;
 	}
